@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./styles/App.css";
 import data from "./data/data.json";
+import { motion } from "framer-motion";
 
 function App() {
   const [i, setI] = useState("");
@@ -28,9 +29,13 @@ function App() {
       <div className="display_todo">
         {todo.map((todo) => {
           return (
-            <div className="todos">
+            <motion.div
+              className="todos"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
               <p>{todo.todol}</p>
-            </div>
+            </motion.div>
           );
         })}
       </div>
