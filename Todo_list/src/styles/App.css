@@ -45,13 +45,18 @@
 .display_todo {
   padding: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+ align-items: center;
 }
 
 .todos {
   background-color: #2f3640;
   width: 50%;
+  height: auto;
   border-radius: 5px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0px;
 }
