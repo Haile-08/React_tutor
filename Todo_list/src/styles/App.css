@@ -50,9 +50,9 @@
  align-items: center;
 }
 
-.todos {
+.todoss {
   background-color: #2f3640;
-  width: 50%;
+  width: 60%;
   height: auto;
   border-radius: 5px;
   display: flex;
