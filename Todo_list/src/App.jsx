@@ -7,10 +7,16 @@ import TodoItem from "./TodoItem";
 function App() {
   const [todoItems, setTodoItems] = useState(Data);
 
-  function createTodoItem(todo) {
+  const createTodoItem = (todo) => {
     const newTodoItems = [...todoItems, { todo, compelete: false }];
     setTodoItems(newTodoItems);
-  }
+  };
+
+  const deleteTodoItem = (index) => {
+    const newTodoItems = [...todoItems];
+    newTodoItems.splice(index, 1);
+    setTodoItems(newTodoItems);
+  };
   return (
     <div className="App">
       <div className="Todoinput">
@@ -18,7 +24,12 @@ function App() {
       </div>
       <div className="Todolist">
         {todoItems.map((item, index) => (
-          <TodoItem item={item} key={index} index={index} />
+          <TodoItem
+            item={item}
+            key={index}
+            index={index}
+            deleteTodoItem={deleteTodoItem}
+          />
         ))}
       </div>
     </div>
