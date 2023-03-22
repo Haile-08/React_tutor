@@ -3,12 +3,18 @@ import "./styles/App.css";
 import Data from "./Data/data.json";
 import TodoInput from "./TodoInput";
 import TodoItem from "./TodoItem";
+import EditForm from "./EditForm";
 
 function App() {
   const [todoItems, setTodoItems] = useState(Data);
+  const [isediting, setEditing] = useState(false);
+  const [index, setIndex] = useState(0);
 
   const createTodoItem = (todo) => {
-    const newTodoItems = [...todoItems, { todo, compelete: false }];
+    const newTodoItems = [
+      ...todoItems,
+      { todo, compelete: false, edit: false },
+    ];
     setTodoItems(newTodoItems);
   };
 
@@ -27,10 +33,25 @@ function App() {
     }
     setTodoItems(newTodoItems);
   };
+
+  const editTodoItem = (index, value) => {
+    const newTodoItems = [...todoItems];
+    newTodoItems[index].todo = value;
+    setTodoItems(newTodoItems);
+  };
   return (
     <div className="App">
       <div className="Todoinput">
-        <TodoInput createTodoItem={createTodoItem} />
+        {isediting ? (
+          <TodoInput createTodoItem={createTodoItem} />
+        ) : (
+          <EditForm
+            isediting={isediting}
+            setEditing={setEditing}
+            index={index}
+            editTodoItem={editTodoItem}
+          />
+        )}
       </div>
       <div className="Todolist">
         {todoItems.map((item, index) => (
@@ -40,6 +61,9 @@ function App() {
             index={index}
             deleteTodoItem={deleteTodoItem}
             completedTodoItem={completedTodoItem}
+            setIndex={setIndex}
+            setEditing={setEditing}
+            isediting={isediting}
           />
         ))}
       </div>

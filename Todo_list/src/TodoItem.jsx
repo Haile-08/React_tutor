@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/App.css";
 
-function TodoItem({ item, index, deleteTodoItem, completedTodoItem }) {
+function TodoItem({
+  item,
+  index,
+  deleteTodoItem,
+  completedTodoItem,
+  setIndex,
+  setEditing,
+  isediting,
+}) {
+  const [value, setValue] = useState("");
   const handledelete = () => {
     deleteTodoItem(index);
   };
   const handlecomplete = () => {
     completedTodoItem(index);
+  };
+  const handleEdit = () => {
+    setEditing(!isediting);
+    setIndex(index);
   };
   return (
     <div className="items">
@@ -19,7 +32,9 @@ function TodoItem({ item, index, deleteTodoItem, completedTodoItem }) {
         <button className="del" onClick={handledelete}>
           Delete
         </button>
-        <button className="ed">edit</button>
+        <button className="ed" onClick={handleEdit}>
+          edit
+        </button>
         <button className="com" onClick={handlecomplete}>
           Compelet
         </button>
