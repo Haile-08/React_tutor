@@ -1,0 +1,95 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.App {
+  width: 700px;
+  height: auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #353b48;
+  padding: 20px;
+}
+.Todoinput {
+  width: 70%;
+  background-color: #353b48;
+  margin: 10px;
+  border-radius: 5px;
+}
+.Todolist {
+  width: 70%;
+  margin: 10px;
+  border-radius: 5px;
+ 
+}
+.input {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.input_area {
+  margin: 10px;
+}
+.btn {
+  margin: 10px;
+}
+.input_area form input{
+  outline: none;
+  border: none;
+  height: 15px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.btn button {
+  background-color: #4cd137;
+  outline: none;
+  border: none;
+  height: 35px;
+  width: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Todo items */
+.items {
+  background-color: #2f3640;
+  margin: 15px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 5px;
+}
+.text {
+  width: auto;
+  margin: 5px;
+}
+.text p{
+ display: flex;
+ flex-wrap: wrap;
+}
+.btns button {
+  outline: none;
+  border: none;
+  margin: 5px;
+  width: 70px;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.del {
+  background-color: #e84118;
+}
+.ed {
+  background-color: #fbc531;
+}
+.com {
+  background-color: #00a8ff;
+}
