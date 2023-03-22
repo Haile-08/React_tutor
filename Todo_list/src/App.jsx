@@ -17,6 +17,16 @@ function App() {
     newTodoItems.splice(index, 1);
     setTodoItems(newTodoItems);
   };
+
+  const completedTodoItem = (index) => {
+    const newTodoItems = [...todoItems];
+    if (newTodoItems[index].compelete === false) {
+      newTodoItems[index].compelete = true;
+    } else {
+      newTodoItems[index].compelete = false;
+    }
+    setTodoItems(newTodoItems);
+  };
   return (
     <div className="App">
       <div className="Todoinput">
@@ -29,6 +39,7 @@ function App() {
             key={index}
             index={index}
             deleteTodoItem={deleteTodoItem}
+            completedTodoItem={completedTodoItem}
           />
         ))}
       </div>
