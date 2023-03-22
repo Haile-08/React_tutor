@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/App.css";
 
-function TodoItem({ item }) {
+function TodoItem({ item, index }) {
   return (
     <div className="items">
       <div className="text">
