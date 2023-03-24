@@ -59,7 +59,7 @@ body {
 .output {
   height: 65%;
   width: 100%;
-  background-color: aqua;
+  
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -72,13 +72,13 @@ body {
 .city {
   height: 35%;
   width: 100%;
-  background-color: antiquewhite;
+
 }
 
 .dayout {
   height: 97vh;
   width: 300px;
-  background-color: brown;
+ 
   border: solid 1px #0097e6;
   outline: none;
   border-radius: 20px;
