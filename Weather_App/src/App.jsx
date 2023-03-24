@@ -1,11 +1,23 @@
-import "./style/App.css";
+import Days from "./Days";
+import "./style/index.css";
 
 function App() {
   return (
-    <div className="App bg-red-100">
-      <h1 className="bg-black ">Hello world!</h1>
-      <div className="img"></div>
-      <div className="output"></div>
+    <div className="App">
+      <div className="today">
+        <div className="output">
+          <div className="symbole"></div>
+          <div className="temp"></div>
+          <div className="date"></div>
+          <div className="line"></div>
+        </div>
+        <div className="city">
+          <p>new york</p>
+        </div>
+      </div>
+      <div className="weak">
+        <Days />
+      </div>
     </div>
   );
 }
