@@ -65,6 +65,15 @@ body {
   width: 100vw;
   height: 35%;
 }
+.city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.city img {
+  width: 300px;
+  height: 300px;
+}
 
 .search {
   background-color: darkgray;
@@ -78,12 +87,23 @@ body {
   background-color: yellow;
   width: 100vw;
   height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 300px;
+  height: 300px;
 }
 
 .temp {
   background-color: darkmagenta;
   width: 100vw;
   height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
