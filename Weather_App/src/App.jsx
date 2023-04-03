@@ -49,20 +49,23 @@ function App() {
       });
   }, [country]);
 
-  let imageV;
-  if (today != null) {
-    if (today.weather[0].main == "Rain") {
-      imageV = <img src={rain} alt="rain" />;
-    } else if (today.weather[0].main == "Cloude") {
-      imageV = <img src={cloud} alt="cloude" />;
-    } else if (today.weather[0].main == "Clear") {
-      imageV = <img src={sunny} alt="sunny" />;
+  const imagefun = (today) => {
+    let imageV;
+    if (today != null) {
+      if (today.weather[0].main == "Rain") {
+        imageV = <img src={rain} alt="rain" />;
+      } else if (today.weather[0].main == "Cloude") {
+        imageV = <img src={cloud} alt="cloude" />;
+      } else if (today.weather[0].main == "Clear") {
+        imageV = <img src={sunny} alt="sunny" />;
+      } else {
+        imageV = <img src={cloud} alt="cloude" />;
+      }
     } else {
-      imageV = <img src={cloud} alt="cloude" />;
+      imageV = <p>...loading</p>;
     }
-  } else {
-    imageV = <p>...loading</p>;
-  }
+    return imageV;
+  };
 
   let temp;
   if (today) {
@@ -70,22 +73,30 @@ function App() {
   } else {
     temp = "...loading";
   }
-
-  let cityV;
-  if (today != null) {
-    if (today.weather[0].main == "Rain") {
-      cityV = <img src={raincity} alt="rain" />;
-    } else if (today.weather[0].main == "Cloude") {
-      cityV = <img src={stormcity} alt="cloude" />;
-    } else if (today.weather[0].main == "Clear") {
-      cityV = <img src={sunnycity} alt="sunny" />;
+  const cityfun = (today) => {
+    let cityV;
+    if (today != null) {
+      if (today.weather[0].main == "Rain") {
+        cityV = <img src={raincity} alt="rain" />;
+      } else if (today.weather[0].main == "Cloude") {
+        cityV = <img src={stormcity} alt="cloude" />;
+      } else if (today.weather[0].main == "Clear") {
+        cityV = <img src={sunnycity} alt="sunny" />;
+      } else {
+        cityV = <img src={stormcity} alt="cloude" />;
+      }
     } else {
-      cityV = <img src={stormcity} alt="cloude" />;
+      cityV = <p>...loading</p>;
     }
-  } else {
-    cityV = <p>...loading</p>;
-  }
+    return cityV;
+  };
 
+  let weekmap;
+  if (week) {
+    weekmap = week.list.slice(0, 5);
+  } else {
+    weekmap = [];
+  }
   return (
     <div className="App">
       <div className="side">
@@ -101,17 +112,25 @@ function App() {
               />
             </form>
           </div>
-          <div className="image">{imageV}</div>
+          <div className="image">{imagefun(today)}</div>
           <div className="temp">
             <p>{temp} &deg;C</p>
           </div>
         </div>
         <div className="lower_panel">
-          <div className="city">{cityV}</div>
+          <div className="city">{cityfun(today)}</div>
+          <div className="name">{today.name}</div>
         </div>
       </div>
       <div className="main">
-        <Days />
+        {weekmap.map((item, index) => (
+          <Days
+            item={item}
+            key={item.dt}
+            index={index}
+            imagefun={imagefun(week.list[index])}
+          />
+        ))}
       </div>
     </div>
   );
