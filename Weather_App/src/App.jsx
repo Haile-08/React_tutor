@@ -119,7 +119,9 @@ function App() {
         </div>
         <div className="lower_panel">
           <div className="city">{cityfun(today)}</div>
-          <div className="name">{today.name}</div>
+          <div className="name">
+            <p>{today.name}</p>
+          </div>
         </div>
       </div>
       <div className="main">

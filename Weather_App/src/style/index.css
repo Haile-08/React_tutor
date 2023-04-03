@@ -37,12 +37,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: beige;
+
   
 }
 
 .side {
-  background-color: blue;
+  background-color: #2f3640;
   height: 100vh;
   width: 25%;
   display: flex;
@@ -51,7 +51,7 @@ body {
   align-items: center;
 }
 .upper_panel {
-  background-color: burlywood;
+ 
   width: 100vw;
   height: 65%;
   display: flex;
@@ -61,7 +61,7 @@ body {
 
 }
 .lower_panel {
-  background-color: chartreuse;
+ 
   width: 100vw;
   height: 35%;
   display: flex;
@@ -75,22 +75,22 @@ body {
   align-items: center;
 }
 .city img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 
 .search {
-  background-color: darkgray;
+ 
   width: 100vw;
-  height: 20%;
+  height: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .image {
-  background-color: yellow;
+
   width: 100vw;
-  height: 50%;
+  height: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,19 +99,22 @@ body {
 .image img {
   width: 300px;
   height: 300px;
+  border-radius: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .temp {
-  background-color: darkmagenta;
   width: 100vw;
   height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.temp p {
+  font-size: 50px;
+}
 .main {
-  background-color: blueviolet;
+ background-color: #353b48;
   height: 100vh;
   width: 75%;
   display: flex;
@@ -119,9 +122,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+.name p{
+  font-size: 20px;
+  font-family: sans-serif;
+}
 
 .days {
-  background-color: cadetblue;
+  background-color: #2f3640;
   height: 90vh;
   width: 250px;
   border-radius: 80px;
@@ -130,8 +137,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-
+.daypart{
+  margin: 70px;
+}
+.daypart p {
+  font-size: 30px;
+}
+.dayimgae {
+  margin: 70px;
+}
+.daytemp {
+  margin: 70px;
+}
 .input {
  outline: none;
  border: none;
