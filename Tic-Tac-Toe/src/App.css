@@ -11,4 +11,9 @@
   outline: none;
   border: none;
   font-size: 30px;
+  color: #0b0d0f;
+  background-color: #353b48;
+}
+.squr:hover {
+  background-color: #262b33 ;
 }
