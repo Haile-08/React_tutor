@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
-function Square() {
+function Square({ value, onSquareClick }) {
   return (
-    <>
-      <button className="squr">X</button>
-      <button className="squr">X</button>
-      <button className="squr">X</button>
-      <button className="squr">X</button>
-    </>
+    <button className="squr" onClick={onSquareClick}>
+      {value}
+    </button>
   );
 }
 
