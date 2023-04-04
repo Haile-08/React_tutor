@@ -18,7 +18,7 @@
 .squr:hover {
   background-color: #262b33 ;
 }
-.board_row {
+.board-row {
   display: flex;
   flex-direction: row;
 }
