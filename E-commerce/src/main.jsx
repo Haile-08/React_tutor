@@ -8,18 +8,24 @@ import Home from "./Pages/Home/Home";
 import Category from "./Pages/Category/Category";
 import Product from "./Pages/Product/Product";
 import ErrorPage from "./Pages/Error/ErrorPage";
+import Layout from "./Pages/Layout";
 
 const router = createBrowserRouter([
-  { path: "/", element: <Home />, errorElement: <ErrorPage /> },
   {
-    path: "/category/:id",
-    element: <Category />,
+    path: "/",
+    element: <Layout />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: "/product/:id",
-    element: <Product />,
-    errorElement: <ErrorPage />,
+    children: [
+      { path: "/", element: <Home /> },
+      {
+        path: "/category/:id",
+        element: <Category />,
+      },
+      {
+        path: "/product/:id",
+        element: <Product />,
+      },
+    ],
   },
 ]);
 
