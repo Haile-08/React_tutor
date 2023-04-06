@@ -3,11 +3,13 @@
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 0px 30px;
     color: #f5f6fa;
     background-color: #353b48;
-    position: sticky;
+    position: fixed;
+    padding: 0px 10px;
+    width: 100vw;
     font-family: 'Quicksand', sans-serif;
 }
 .left {
