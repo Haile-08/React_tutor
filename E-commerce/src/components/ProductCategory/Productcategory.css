@@ -28,6 +28,14 @@
     border: solid 1px #f5f6fa;
     cursor: pointer;
 }
+
 .card img{
     width: 400px;
+}
+.p {
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    color: #f5f6fa;
+    font-family: 'Quicksand', sans-serif;
 }

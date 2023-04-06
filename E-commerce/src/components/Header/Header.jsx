@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { FaShoppingCart } from "react-icons/fa";
+import Cart from "../cart/Cart";
 
 function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="navbar">
       <div className="left">
@@ -20,11 +23,12 @@ function Header() {
         </div>
       </div>
       <div className="right">
-        <div className="cont">
+        <div className="cont" onClick={() => setOpen(!open)}>
           <FaShoppingCart />
           <span>0</span>
         </div>
       </div>
+      {open && <Cart />}
     </div>
   );
 }

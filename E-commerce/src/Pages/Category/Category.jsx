@@ -1,7 +1,8 @@
 import React from "react";
+import Productcategory from "../../components/ProductCategory/Productcategory";
 
 function Category() {
-  return <div>Category</div>;
+  return <Productcategory />;
 }
 
 export default Category;

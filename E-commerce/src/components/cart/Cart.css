@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    height: auto;
+    width: 500px;
+    right: 40px;
+    top: 80px;
+    z-index: 9999;
+    border-radius: 10px;
+    background-color: #353b48;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.cart p {
+    font-size: 25px;
+    margin: 10px 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  
+}
+.item img{
+    width: 100px;
+    margin: 10px 10px;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 0px 20px 0px 0px;
+}
+
+.ititle p {
+    font-size: 15px;
+    inline-size: 200px;
+    overflow-wrap: break-word; 
+}
+.idecription p{
+    font-size: 15px;
+    inline-size: 300px;
+    overflow-wrap: break-word; 
+}
+
+.item button {
+    cursor: pointer;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #e84118;
+}
+
+.foot {
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 10px;
+}
+
+.subtotal {
+    margin: 10px 40px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.subtotal p {
+    font-size: 15px;
+}
+.subtotal span {
+    font-size: 15px;
+}
+
+.checkout {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.checkout button {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background-color: #00a8ff;
+    color: #f5f6fa;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.reset {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.reset button {
+    width: 100px;
+    height: 20px;
+    outline: none;
+    border: none;
+    background-color: #e84118;
+    color: #f5f6fa;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-family: 'Quicksand', sans-serif;
+}
