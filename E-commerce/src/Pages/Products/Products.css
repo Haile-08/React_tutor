@@ -17,12 +17,12 @@
     color: #f5f6fa;
     height: 100px;
     width: 99vw;
-    border: solid 1px #f5f6fa;
+ 
 }
 .list {
     height: auto;
     width: 100vw;
-    background-color: antiquewhite;
+  
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;

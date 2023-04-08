@@ -1,17 +1,16 @@
 import React from "react";
-import jew from "../../assets/men.jpg";
 import "./Item.css";
 import { Link } from "react-router-dom";
 
-function Item() {
+function Item({ item }) {
   return (
     <Link to="/product/1">
       <div className="iitem">
-        <img src={jew} alt="g" />
+        <img src={item.image} alt="g" />
         <div className="name">
-          <p>t shirt</p>
+          <p>{item.title}</p>
         </div>
-        <p>$20</p>
+        <p>${item.price}</p>
       </div>
     </Link>
   );
