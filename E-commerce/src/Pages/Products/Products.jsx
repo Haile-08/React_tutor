@@ -4,6 +4,7 @@ import Item from "../../components/Item/Item";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 
+
 function Products() {
   const { id } = useParams();
   const { data, loading, error } = useFetch(

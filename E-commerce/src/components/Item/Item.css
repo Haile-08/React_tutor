@@ -15,5 +15,8 @@
 
 .iitem p {
     margin-left: 20px;
-   
+    
+    text-decoration: none;
+    color: #f5f6fa;
+    outline: none;
 }

@@ -22,8 +22,14 @@
 .list {
     height: auto;
     width: 100vw;
-  
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+}
+
+.notfound {
+    color: #f5f6fa;
+    font-size: 100px;
+    text-align: center;
+    width: 100vw;
 }
