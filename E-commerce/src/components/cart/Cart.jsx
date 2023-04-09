@@ -2,7 +2,7 @@ import React from "react";
 import "./Cart.css";
 import { FaTrash } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { removeItem } from "../../features/cart/cartSlice";
+import { removeItem, resetCart } from "../../features/cart/cartSlice";
 
 function Cart() {
   const products = useSelector((state) => state.cart.products);
@@ -40,7 +40,7 @@ function Cart() {
         <div className="checkout">
           <button>PROCEED TO CHECKOUT</button>
         </div>
-        <div className="reset">
+        <div className="reset" onClick={() => dispatch(resetCart())}>
           <button>Reset Cart</button>
         </div>
       </div>
