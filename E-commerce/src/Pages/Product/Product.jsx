@@ -12,16 +12,7 @@ function Product() {
   const { data, loading, error } = useFetch(
     `https://fakestoreapi.com/products/${id}`
   );
-  const dispatch = useDispatch(
-    addToCart({
-      id: data?.id,
-      title: data?.title,
-      desc: data?.description,
-      img: data?.image,
-      price: data?.price,
-      quantity: quantity,
-    })
-  );
+  const dispatch = useDispatch();
   return (
     <div className="iproduct">
       <img src={data?.image} alt="" />
@@ -51,7 +42,20 @@ function Product() {
           </button>
         </div>
         <div className="addbtn">
-          <button onClick={() => dispatch()}>
+          <button
+            onClick={() =>
+              dispatch(
+                addToCart({
+                  id: data?.id,
+                  title: data?.title,
+                  desc: data?.description,
+                  img: data?.image,
+                  price: data?.price,
+                  quantity: quantity,
+                })
+              )
+            }
+          >
             <FaCartPlus />
             ADD TO CART
           </button>
