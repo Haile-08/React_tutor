@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import { FaShoppingCart } from "react-icons/fa";
 import Cart from "../cart/Cart";
+import { useSelector } from "react-redux";
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const products = useSelector((state) => state.cart.products);
 
   return (
     <div className="navbar">
@@ -25,7 +27,7 @@ function Header() {
       <div className="right">
         <div className="cont" onClick={() => setOpen(!open)}>
           <FaShoppingCart />
-          <span>0</span>
+          <span>{products?.length}</span>
         </div>
       </div>
       {open && <Cart />}
