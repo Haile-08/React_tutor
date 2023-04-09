@@ -2,8 +2,10 @@ import React from "react";
 import "./Cart.css";
 import { FaTrash } from "react-icons/fa";
 import image from "../../assets/men.jpg";
+import { useSelector } from "react-redux";
 
 function Cart() {
+  const products = useSelector((state) => state.cart.products);
   return (
     <div className="cart">
       <p>Products in your cart</p>

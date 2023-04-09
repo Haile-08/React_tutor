@@ -17,7 +17,7 @@
 .info {
     padding: 20px;
     width: 800px;
-    height: 700px;
+    height: auto;
     border: solid 1px;
 }
 
@@ -55,4 +55,21 @@
         justify-content: center;
         align-items: center;
         justify-content: space-evenly;
+}
+
+.quant {
+    color: #f5f6fa;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+.btns {
+    margin: 10px;
+    width: 70px;
+    height: 40px;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
