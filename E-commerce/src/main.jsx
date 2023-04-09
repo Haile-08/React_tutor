@@ -10,8 +10,9 @@ import Product from "./Pages/Product/Product";
 import ErrorPage from "./Pages/Error/ErrorPage";
 import Layout from "./Pages/Layout";
 import Products from "./Pages/Products/Products";
-import { store } from "./app/store";
+import { persistor, store } from "./app/store";
 import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <PersistGate loading={"loading"} persistor={persistor}>
+        <RouterProvider router={router} />
+      </PersistGate>
     </Provider>
   </React.StrictMode>
 );
